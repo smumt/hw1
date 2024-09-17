@@ -1,19 +1,38 @@
 package student;
 
 public class Homework1 {
-
+    
     public double shippingCalculator(int n){
-        //TODO Write your code here for problem 1
-        return 0;
+        double total = 10.95;
+        if(n==0){
+            return 0;
+        }else{
+            while(n>1){
+                total+=2.95;
+                n--;
+            }
+            return total;
+        }
     }
     public boolean isValidTriangle(int a, int b, int c){
-        //TODO Write your code here for problem 2
-        return false;
-
+        if(a+b<=c){
+            return false;
+        }else if(b+c<=a){
+            return false;
+        }else if(a+c<=b){
+            return false;
+        }else{
+            return true;
+        }
     }
     public boolean isPrime(int number){
-        //TODO Write your code here for problem 3
-        return false;
+        int n=number;
+        for(int i=2; i<number; i++){
+            if(n%i==0){
+                return false;
+            }
+        }
+        return true;
     }
 
     public  int hex2int(String hex) {
